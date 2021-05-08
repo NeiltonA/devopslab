@@ -8,3 +8,14 @@ python:
 # Instalação de Módulos que são necessários para a Aplicação.
 install:
   - pip install flask
+  
+  
+# Definir o Deploy no Heroku
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  edge: true 
+  app: ESCREVA_AQUI_SUA_APP_DO_HEROKU
+  on:
+      branch: main  
+  
